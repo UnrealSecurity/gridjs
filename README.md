@@ -2,7 +2,7 @@
 Canvas drawing but for text... or something like that...
 
 ## To-do
-- Fix strange behavior with autosize option
+- Fix strange behavior with autosize option (disabled by default)
 
 ## Simple example
 ```javascript
