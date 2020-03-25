@@ -38,6 +38,21 @@ function Grid(width, height, config, fill=' ') {
 		}
 	}
 
+	this.create = (width, height, fill=' ')=>{
+		this.grid = [];
+
+		for (let y=0; y<height; y++) {
+			var line = [];
+			for (let x=0; x<width; x++) {
+				line.push(fill);
+			}
+			this.grid.push(line);
+		}
+
+		this.width = width;
+		this.height = height;
+	}
+
 	this.writev = (x0, y0, str, borders=false)=>{
 		this.write(x0, y0, str.split('').join('\n'), borders)
 	}
@@ -181,11 +196,13 @@ function Grid(width, height, config, fill=' ') {
 		});
 	}
 
-	for (let y=0; y<height; y++) {
-		var line = [];
-		for (let x=0; x<width; x++) {
-			line.push(fill);
+	if (width != null && height != null) {
+		for (let y=0; y<height; y++) {
+			var line = [];
+			for (let x=0; x<width; x++) {
+				line.push(fill);
+			}
+			this.grid.push(line);
 		}
-		this.grid.push(line);
 	}
 } if (typeof(module)!='undefined') module.exports = Grid;
