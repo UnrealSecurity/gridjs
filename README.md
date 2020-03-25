@@ -14,3 +14,10 @@ grid.write(1, 1, ti.text, true)
 
 console.log(grid.toString());
 ```
+```md
+┌────────────────────┐
+│Hello               │
+│     beautiful      │
+│               world│
+└────────────────────┘
+```
